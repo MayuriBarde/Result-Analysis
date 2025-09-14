@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"src="/eel.js"></script>
+    <title>Result Analysis</title>
+</head>
+
+<body>
+
+  <div class="header-wrapper">
+    <img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Savitribai_Phule_Pune_University_Logo.png" alt="SPPU" class="logo">
+    
+    <div class="headings">
+      <h1>Savitribai Phule Pune University</h1>
+      <h2>Dr. Vithalrao Vikhe Patil College of Engineering, A. nagar</h2>
+    </div>
+
+    <img src="https://dial4college.blr1.cdn.digitaloceanspaces.com/pro/149/logo/1695890609.jpg" alt="DVVPCOE" class="logo">
+  </div>
+
+  <!-- Tab Navigation -->
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
+    <button class="tablinks" onclick="openTab(event, 'About')">About Us</button>
+    <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+  </div>
+
+  <!-- Tab Contents -->
+  <div id="Home" class="tabcontent">
+    <div class="tab-heading">
+      <h3>Home</h3>
+      <p>Upload your PDF files to work on them.</p>
+    </div>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <div class="pdf-upload">
+        <div class="pdf-upload-container">
+          <h4>Upload University gazette (.pdf)</h4>
+          <input type="file" accept="application/pdf" name="pdf1" class="pdf-input">
+        </div>
+      </div>
+      <div class="submit-button">
+        <button type="submit" class="button">Upload Files</button>
+      </div>
+    </form>
+    <div class="line">
+      <div class="tab-heading">
+        <p id="line-content">Scroll down for download!!</p>
+      </div>
+    </div>
+    <div class="download">
+      <div class="download-section">
+        <div class="download-heading">
+          <h4>Download Your Files</h4>
+        </div>
+        <div class="download-button">
+          <a href="{{ url_for('download_file', filename=file) }}" class="download-btn">Download  file </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="About" class="tabcontent">
+    <div class="tab-heading">
+      <h3>About Us</h3>
+      <p>We are a team of developers building cool stuff.</p>
+      <br>
+    </div>
+    <div class="students">
+      <ul>
+        <li>Esha Atri</li>
+        <a href="https://www.linkedin.com/in/esha-atri-563b40317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Click here to view LinkedIn Profile</a>
+        <li></li>
+        <br>
+        <li>Barde Mayuri</li>
+        <li><a href="https://www.linkedin.com/in/mayuri-barde-a700082b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Click here to view LinkedIn Profile</a></li>
+        <br>
+        <li>Bhinder Kirat</li>
+        <li>        <a href="">Click here to view LinkedIn Profile</a>        </li>
+        <br>
+        <li>Patil Prasanna</li>
+        <li>        <a href="">Click here to view LinkedIn Profile</a>        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="Contact" class="tabcontent">
+    <div class="tab-heading">
+      <h3>Contact</h3>
+      <p>You can contact us at</p>
+      <br>
+    </div>
+    <div class="students">
+      <ul>
+        <li>Esha Atri</li>
+        <li>eshaatri212@gmail.com</li>
+        <br> 
+        <li>Barde Mayuri</li>
+        <li>mayuridhaktode1322@gmail.com</li>
+        <br>
+        <li>Bhinder Kirat</li>
+        <li>kiratkb06@gmail.com</li>
+        <br>
+        <li>Patil Prasanna</li>
+        <li>saiepatil84@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Existing HTML content -->
+
+  
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
